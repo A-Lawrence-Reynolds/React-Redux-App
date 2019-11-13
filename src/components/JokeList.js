@@ -13,7 +13,7 @@ function JokeList(props) {
           {props.joke.value}
         </li>
       </ul>
-      <h2 onClick={() => props.fetchChuckJoke()}>› Summon Chuck ‹</h2>
+      <button onClick={() => props.fetchChuckJoke()}>› Summon Chuck ‹</button>
     </>
   );
 }
@@ -28,7 +28,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(JokeList);
+export default connect(mapStateToProps, mapDispatchToProps)(JokeList);
